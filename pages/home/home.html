@@ -1,0 +1,47 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Calculator Application</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+
+	<h2>Electricity Cost Calculator</h2>
+	<p>
+    This electricity cost calculator is a handy tool that will help you estimate the cost of your daily consumption of electricity one it's been used.
+	</p>
+	<p><em>
+   The cost of electricity continues to increase every hour of its usage. Each hour of electricity consumption has an estimated value of $4.33, so keep an eye out for that!     
+  </em></p>
+
+	<ion-item>
+		<ion-label position="floating">Power Consumption:</ion-label>
+		<ion-input type=number [(ngModel)]="powerConsumption"></ion-input>
+	</ion-item>
+
+	<ion-item>
+		<ion-label position="floating">Hours of Use:</ion-label>
+		<ion-input type=number [(ngModel)]="usageHours"></ion-input>
+	</ion-item>
+  
+  <ion-item>
+		<ion-label position="floating">Cost (per kHw)</ion-label>
+		<ion-input type=number [(ngModel)]="cost"></ion-input>
+	</ion-item>
+
+	<button ion-button color="success" (click)="compute()">Compute</button>
+
+	<ion-item>
+		<h3> Energy Consumed per Day (kHw): {{elecConsumed}} </h3>
+
+
+	</ion-item>
+
+	<ion-item>
+		<h3> Electricity Cost per Day: {{elecCost | currency: '&#8369;'}} </h3>
+
+
+	</ion-item>
+
+</ion-content>

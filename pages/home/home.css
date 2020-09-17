@@ -1,0 +1,17 @@
+ion-content {
+  background: linear-gradient(to bottom, #FAA788, #f8788E, #031888);
+}
+
+h2 {
+  color: #27176d;
+  text-align: center;
+}
+
+p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: justify;
+}
+
+ion-item {
+  background-color: #eaec72
+}
